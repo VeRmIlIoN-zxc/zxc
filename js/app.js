@@ -1,51 +1,38 @@
-class Calculator {
-    constructor(pA, pB, pOper) {
-        this.a = pA * 1,
-        this.b = pB * 1,
-        this.oper = pOper
+function calculatePerimeter(side) {
+    if (typeof side !== 'number' || side <= 0) {
+        throw new Error('Сторона должна быть положительным числом');
     }
-
-    sum() {
-        return this.a + this.b
-    }
-
-    minus() {
-        return this.a - this.b
-    }
-
-    umn() {
-        return this.a * this.b
-    }
-
-    del() {
-        return this.a / this.b
-    }
-
-    result() {
-        switch (this.oper) {
-            case "+":
-                return this.sum();
-            case "-":
-                return this.minus();
-            case "*":
-                return this.umn();
-            case "/":
-                if (this.b == 0) {
-                    return "Error"
-                } else {
-                    return this.del();
-                }
-        }
-    }
+    return 4 * side;
 }
 
-let button = document.querySelector("button").addEventListener("click", () => {
-    const calc = new Calculator(
-        document.querySelectorAll("input")[0].value, 
-        document.querySelectorAll("input")[1].value, 
-        document.querySelector("select").value
-    )
+console.log(calculatePerimeter(5))
+console.log(calculatePerimeter(3.5))
+console.log(calculatePerimeter(10))
 
-    document.querySelector('span').innerHTML = calc.result()
-})
+console.log(50);
+console.log(10);
+
+function hoursFromStartOfDay(n) {
+    return Math.floor(n / 3600);
+}
+
+console.log(hoursFromStartOfDay(3600))
+console.log(hoursFromStartOfDay(7200))
+console.log(hoursFromStartOfDay(5000))
+console.log(hoursFromStartOfDay(86400))
+
+function reverseDigits(num) {
     
+    if (num < 10 || num > 99 || !Number.isInteger(num)) {
+        throw new Error("Число должно быть двузначным");
+    }
+    
+    const tens = Math.floor(num / 10);   
+    const units = num % 10;              
+    return units * 10 + tens;            
+}
+
+console.log(reverseDigits(23))
+console.log(reverseDigits(57))
+console.log(reverseDigits(10))
+console.log(reverseDigits(99))
