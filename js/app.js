@@ -1,38 +1,22 @@
-function calculatePerimeter(side) {
-    if (typeof side !== 'number' || side <= 0) {
-        throw new Error('Сторона должна быть положительным числом');
-    }
-    return 4 * side;
-}
-
-console.log(calculatePerimeter(5))
-console.log(calculatePerimeter(3.5))
-console.log(calculatePerimeter(10))
-
-console.log(50);
-console.log(10);
-
-function hoursFromStartOfDay(n) {
-    return Math.floor(n / 3600);
-}
-
-console.log(hoursFromStartOfDay(3600))
-console.log(hoursFromStartOfDay(7200))
-console.log(hoursFromStartOfDay(5000))
-console.log(hoursFromStartOfDay(86400))
-
-function reverseDigits(num) {
+function isDivisible(a, b) {
     
-    if (num < 10 || num > 99 || !Number.isInteger(num)) {
-        throw new Error("Число должно быть двузначным");
+    if (b === 0) {
+        return false; 
     }
-    
-    const tens = Math.floor(num / 10);   
-    const units = num % 10;              
-    return units * 10 + tens;            
+    return a % b === 0;
 }
 
-console.log(reverseDigits(23))
-console.log(reverseDigits(57))
-console.log(reverseDigits(10))
-console.log(reverseDigits(99))
+
+console.log(isDivisible(10, 2))
+console.log(isDivisible(10, 3))
+console.log(isDivisible(15, 5))
+console.log(isDivisible(7, 0))
+
+function printSecondToLast(str) {
+    if (str.length > 1) {
+        console.log(str[str.length - 2]);
+    }
+}
+
+printSecondToLast("Hello")
+printSecondToLast("JS")   
