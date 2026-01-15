@@ -1,0 +1,30 @@
+@font-face {
+    font-family: Sen;
+    src: url(../fonts/Sen-ExtraBold.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Sen;
+    src: url(../fonts/Sen-Bold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Sen;
+    src: url(../fonts/Sen-Medium.ttf);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: Sen;
+    src: url(../fonts/Sen-Regular.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: Sen;
+    src: url(../fonts/Sen-SemiBold.ttf);
+    font-weight: 300;
+}
+
+
+
